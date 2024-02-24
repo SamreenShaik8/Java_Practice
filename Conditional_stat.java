@@ -6,7 +6,6 @@ public class Conditional_stat {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int age=sc.nextInt();
-        
         // if condition checks weather condition is true or not if it is true then the  if condition will be printed
         if(age>=18){
             System.out.println("The person is adult");
