@@ -1,31 +1,25 @@
-// a whole number greater than 1 that cannot be exactly divided by any whole number other than itself
-import java.util.Scanner;
-
+import java.util.*;
 public class Prime_Number {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        // we will take take any variable lets take temp variable
+        int temp=0;
 
-        // Taking the user input from the user
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
-        scanner.close();
-        
-        // condition to check the number is greater than 1 or not
-        if (number < 2) {
-            System.out.println(number + " is not a prime number.");
-        } else {
-            boolean isPrime = true;
-            for (int i = 2; i <= Math.sqrt(number); i++) {
-                if (number % i == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-            if (isPrime) {
-                System.out.println(number + " is a prime number.");
-            } else {
-                System.out.println(number + " is not a prime number.");
+        // for loop to check the condition if the number is 
+        for(int i=2;i<=n-1;i++){
+            if(n%i==0){
+                temp=temp+1;
             }
         }
+        if(temp==0){
+            System.out.println(n+" is prime number");
+
+        }
+        else{
+            System.out.println(n+" is not a prime number");
+        }
+        
     }
 }
